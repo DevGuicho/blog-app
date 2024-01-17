@@ -1,4 +1,4 @@
 export default () => ({
-  articles: [],
-  isLoading: true
-})
+  categories: [],
+  isLoading: true,
+});

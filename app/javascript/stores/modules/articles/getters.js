@@ -1,7 +1,17 @@
+import { vModelSelect } from 'vue';
+
 export const getArticles = (state) => {
-  return state.articles;
+  if (state.query === '')
+    return state.articles;
+  else
+    return state.articles.filter(article => article.title.toLowerCase().includes(state.query.toLowerCase()));
 };
 
-export const getCategories = (state) => {
-  return state.categories;
+export const getArticleById = (state) => (id = '') => {
+
+  const article = state.articles.find(article => article.id == id);
+
+  if (!article) return null;
+
+  return { ...article };
 };

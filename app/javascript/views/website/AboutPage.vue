@@ -9,9 +9,6 @@ export default {
       pageName: 'About',
     };
   },
-  props: {
-    qoli: Array,
-  },
 };
 </script>
 <style></style>

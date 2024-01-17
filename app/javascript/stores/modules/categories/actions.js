@@ -1,9 +1,7 @@
-import articleApi from '@/api/articleApi';
+import categoryApi from '@/api/categoryApi';
 
-export const loadArticles = async ({ commit }) => {
-  const { data: res } = await articleApi.get('/');
+export const loadCategories = async ({ commit }) => {
+  const { data: res } = await categoryApi.get('/');
 
-  commit('setArticles', res.data);
+  commit('setCategories', res.data);
 };
-
-

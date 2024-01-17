@@ -1,7 +1,9 @@
+import ArticlePage from '@/views/website/ArticlePage.vue';
+
+import NewArticlePage from '@/views/website/NewArticlePage.vue';
+
 const Index = () => import('@/views/website/IndexPage.vue');
 const About = () => import('@/views/website/AboutPage.vue');
-const Login = () => import('@/views/website/LoginPage.vue');
-const Signup = () => import('@/views/website/SignupPage.vue');
 
 const routes = [
   {
@@ -19,18 +21,25 @@ const routes = [
     },
   },
   {
-    path: '/login',
-    name: 'login',
-    components: {
-      default: Login,
-    },
+    path: '/articles/:id',
+    name: 'article',
+    component: ArticlePage,
+    props: (route) => ({
+      id: route.params.id,
+    }),
   },
   {
-    path: '/signup',
-    name: 'signup',
-    components: {
-      default: Signup,
-    },
+    path: '/articles/new',
+    name: 'newArticle',
+    component: NewArticlePage,
+  },
+  {
+    path: '/articles/edit/:id',
+    name: 'editArticle',
+    component: NewArticlePage,
+    props: (route) => ({
+      id: route.params.id,
+    }),
   },
 ];
 

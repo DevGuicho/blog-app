@@ -1,4 +1,4 @@
-export const setArticles = (state, articles) => {
-  state.articles = [...state.articles, ...articles];
+export const setCategories = (state, categories) => {
+  state.categories = [...state.categories, ...categories];
   state.isLoading = false;
 };

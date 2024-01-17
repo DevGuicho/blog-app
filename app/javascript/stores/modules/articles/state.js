@@ -1,5 +1,5 @@
 export default () => ({
-  isLoading: true,
   articles: [],
-  categories: []
-})
+  isLoading: true,
+  query:''
+});

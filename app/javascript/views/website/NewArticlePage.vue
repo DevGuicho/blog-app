@@ -1,13 +1,19 @@
-<script>
-export default {
-  name: 'NewArticlePage',
-};
-</script>
-
 <template>
-
+  <NewArticleForm :id="this.id"></NewArticleForm>
 </template>
 
-<style scoped>
+<script>
 
-</style>
+import { defineComponent } from 'vue';
+import NewArticleForm from '@/components/modules/articles/NewArticleForm.vue';
+
+export default defineComponent({
+  components: { NewArticleForm },
+  props: {
+    id: {
+      type: String,
+      required: false,
+    },
+  },
+});
+</script>

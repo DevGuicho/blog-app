@@ -1,3 +1,4 @@
-@use 'vuetify' with (
-  $variable: false,
+@use 'vuetify/settings' with (
+  $color-pack: false,
+  $utilities: false
 );
